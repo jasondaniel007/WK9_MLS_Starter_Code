@@ -1,0 +1,183 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Bootstrap Card overrides for dark mode */
+.card {
+  background-color: var(--bg-white) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-dark) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.card-body {
+  color: var(--text-dark) !important;
+}
+
+/* Bootstrap Form overrides for dark mode */
+.form-control {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  border-color: var(--border-light) !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  border-color: var(--primary-blue) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+}
+
+/* Textarea specific */
+textarea.form-control {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+}
+
+/* Bootstrap button light variant for dark mode */
+.btn-light {
+  background-color: var(--hover-bg) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-dark) !important;
+}
+
+.btn-light:hover {
+  background-color: var(--border-light) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-dark) !important;
+}
+
+/* Badge overrides for dark mode */
+.badge {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-dark) !important;
+}
+
+/* ListGroup overrides for dark mode */
+.list-group-item {
+  background-color: transparent !important;
+  color: var(--text-dark) !important;
+  border-color: var(--border-light) !important;
+}
+
+.list-group-item:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+.list-group-item.active {
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: white !important;
+}
+
+.list-group-item-action:focus,
+.list-group-item-action:active {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-dark) !important;
+}
+
+/* Text color classes */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-dark {
+  color: var(--text-dark) !important;
+}
+
+/* Text uppercase should not override color */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Pagination overrides for dark mode */
+.pagination .page-link {
+  background-color: var(--bg-white) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-dark) !important;
+  transition: all 0.2s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: var(--hover-bg) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-dark) !important;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: white !important;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: var(--bg-light) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-muted) !important;
+  opacity: 0.5;
+}
+
+/* Card title overrides */
+.card-title {
+  color: var(--text-dark) !important;
+}
+
+/* Small text overrides */
+small, .small {
+  color: var(--text-dark) !important;
+}
+
+/* Badge secondary override for dark mode */
+.badge.bg-secondary {
+  background-color: var(--text-muted) !important;
+  color: var(--bg-white) !important;
+}
+
+/* Fw-semibold override */
+.fw-semibold {
+  color: var(--text-dark) !important;
+}
+
+/* Heading overrides for dark mode */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--text-dark) !important;
+}
+
+/* Paragraph text override */
+p {
+  color: var(--text-dark);
+}
+
+/* Span and div text */
+div, span {
+  transition: color 0.3s ease;
+}

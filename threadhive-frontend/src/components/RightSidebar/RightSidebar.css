@@ -1,0 +1,74 @@
+.right-sidebar {
+  width: 320px;
+  padding: 0;
+  height: fit-content;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  position: sticky;
+  top: 73px;
+  display: none;
+  flex-shrink: 0;
+}
+
+/* Show on desktop and larger */
+@media (min-width: 992px) {
+  .right-sidebar {
+    display: block;
+  }
+}
+
+/* Adjust width for larger screens */
+@media (min-width: 1400px) {
+  .right-sidebar {
+    width: 360px;
+  }
+}
+
+/* Sidebar card styling */
+.right-sidebar .card {
+  border-radius: 16px !important;
+  border: 1px solid var(--border-light) !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--bg-white) !important;
+}
+
+.right-sidebar .card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-2px);
+}
+
+.right-sidebar .card-title {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px !important;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.right-sidebar .list-group-item {
+  padding: 12px 0 !important;
+  transition: all 0.2s ease;
+  border-radius: 8px !important;
+  margin-bottom: 4px;
+}
+
+.right-sidebar .list-group-item:hover {
+  background-color: rgba(0, 121, 211, 0.05) !important;
+  padding-left: 8px !important;
+  transform: translateX(4px);
+}
+
+.right-sidebar .badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.right-sidebar .badge.bg-secondary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none;
+}

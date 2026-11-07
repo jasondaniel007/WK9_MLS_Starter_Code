@@ -1,0 +1,213 @@
+.header-navbar {
+  background-color: var(--bg-white, #FFFFFF) !important;
+  border-bottom: 1px solid var(--border-light, #EDEFF1);
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px !important;
+}
+
+.header-logo {
+  color: var(--primary-orange, #FF4500);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.header-logo:hover {
+  opacity: 0.8;
+}
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-dark, #1A1A1B);
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 12px;
+}
+
+.hamburger-btn:hover {
+  color: var(--primary-orange, #FF4500);
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px 10px;
+  margin-right: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--hover-bg, #F6F7F8);
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+.user-profile-section {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.user-profile-section:hover {
+  background-color: var(--hover-bg, #F6F7F8);
+}
+
+/* Profile button (uses .user-profile-btn) */
+.user-profile-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  margin-right: 12px;
+  border-radius: 24px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-dark, #1A1A1B);
+  transition: background-color 0.15s, border-color 0.15s;
+  text-decoration: none !important;
+}
+
+.user-profile-btn:hover,
+.user-profile-btn:focus {
+  background-color: var(--hover-bg, #F6F7F8);
+  border-color: var(--border-light, #EDEFF1);
+  text-decoration: none !important;
+  color: var(--text-dark, #1A1A1B);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-orange, #FF4500), var(--primary-blue, #0079D3));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--text-dark, #1A1A1B);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.btn-header {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-blue, #0079D3);
+  transition: all 0.18s ease;
+}
+
+.btn-header.btn-primary {
+  background-color: var(--primary-blue, #0079D3);
+  border-color: var(--primary-blue, #0079D3);
+}
+
+.btn-header.btn-primary:hover {
+  background-color: #0066b3;
+  border-color: #0066b3;
+}
+
+.btn-header.btn-outline {
+  background-color: transparent;
+  color: var(--primary-blue, #0079D3);
+}
+
+.btn-header.btn-outline:hover {
+  background-color: var(--primary-blue, #0079D3);
+  color: white;
+}
+
+/* Make login/register buttons match document colors */
+.btn-header.btn-primary {
+  background-color: var(--primary-blue, #0079D3);
+  border-color: var(--primary-blue, #0079D3);
+  color: #fff;
+}
+
+.btn-header.btn-outline {
+  background: transparent;
+  color: var(--primary-blue, #0079D3);
+  border-color: var(--primary-blue, #0079D3);
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .header-logo {
+    font-size: 20px;
+  }
+
+  .dark-mode-toggle {
+    font-size: 20px;
+    padding: 4px 8px;
+    margin-right: 8px;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .user-profile-btn {
+    padding: 4px 6px;
+    margin-right: 8px;
+    gap: 0;
+  }
+
+  .btn-header {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .header-container {
+    padding: 0 16px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .user-name {
+    font-size: 13px;
+  }
+}

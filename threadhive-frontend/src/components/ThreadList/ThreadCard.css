@@ -1,0 +1,209 @@
+.thread-card {
+  background-color: var(--bg-white, #FFFFFF);
+  border: 1px solid var(--border-light, #EDEFF1);
+  border-radius: 12px;
+  margin-bottom: 18px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.thread-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-blue, #0079D3);
+  transform: translateY(-2px);
+}
+
+.thread-card-body {
+  padding: 20px;
+  display: flex;
+  gap: 18px;
+}
+
+.vote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+  padding: 8px;
+  background-color: var(--bg-light, #F8F9FA);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.vote-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-muted, #7C7C7C);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vote-btn:hover {
+  background-color: var(--hover-bg, #F6F7F8);
+  transform: scale(1.15);
+}
+
+.vote-btn.upvote:hover {
+  color: var(--primary-orange, #FF4500);
+  background-color: rgba(255, 69, 0, 0.1);
+}
+
+.vote-btn.downvote:hover {
+  color: var(--primary-blue, #0079D3);
+  background-color: rgba(0, 121, 211, 0.1);
+}
+
+.vote-count {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-dark, #1A1A1B);
+  margin: 6px 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.thread-content-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.thread-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-dark, #1A1A1B);
+  margin: 0;
+  line-height: 1.5;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  letter-spacing: -0.2px;
+}
+
+.subreddit-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+  border: none;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.thread-text {
+  font-size: 14px;
+  color: var(--text-muted, #7C7C7C);
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.view-thread-btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--primary-blue, #0079D3);
+  border: 1px solid var(--primary-blue, #0079D3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.view-thread-btn:hover {
+  background-color: var(--primary-blue, #0079D3);
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .thread-card-body {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .vote-section {
+    min-width: 32px;
+  }
+
+  .vote-btn {
+    padding: 2px;
+  }
+
+  .vote-btn svg,
+  .vote-btn i {
+    font-size: 16px;
+  }
+
+  .vote-count {
+    font-size: 11px;
+  }
+  
+  .thread-card {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .thread-title {
+    font-size: 14px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .thread-text {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .subreddit-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .view-thread-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 768px) and (max-width: 991px) {
+  .thread-card-body {
+    padding: 11px;
+  }
+
+  .thread-title {
+    font-size: 15px;
+  }
+}

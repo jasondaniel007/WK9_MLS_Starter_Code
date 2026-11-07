@@ -1,0 +1,89 @@
+/* CommentCard.css */
+.comment-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  background-color: var(--bg-white) !important;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.comment-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateX(4px);
+  border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+.comment-card .card-body {
+  padding: 1.75rem;
+}
+
+.comment-avatar {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--primary-blue));
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.comment-author {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 15px;
+  letter-spacing: -0.2px;
+}
+
+.comment-badge {
+  background-color: var(--bg-light);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.comment-content {
+  color: var(--text-dark);
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-line;
+  margin-bottom: 1.25rem;
+}
+
+.comment-vote-btn {
+  border-radius: 24px;
+  padding: 8px 14px;
+  border: 2px solid var(--border-light) !important;
+  background-color: var(--bg-white) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-vote-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comment-vote-btn .bi-arrow-up {
+  color: var(--primary-orange);
+  font-weight: bold;
+}
+
+.comment-vote-btn .bi-arrow-down {
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.comment-vote-count {
+  font-weight: 700;
+  min-width: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-dark);
+}

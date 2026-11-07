@@ -1,0 +1,101 @@
+.auth-container {
+  min-height: calc(100vh - 120px);
+  background-color: var(--bg-light);
+  transition: background-color 0.3s ease;
+}
+
+.auth-card {
+  background-color: var(--bg-white) !important;
+  border: 1px solid var(--border-light) !important;
+  max-width: 550px;
+  width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-title {
+  color: var(--primary-blue);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: color 0.3s ease;
+}
+
+.auth-form-control {
+  height: 58px;
+  font-size: 16px;
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border-light) !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-form-control:focus {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 3px rgba(0, 121, 211, 0.1);
+}
+
+.auth-form-control::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+}
+
+.auth-form-control:focus::placeholder {
+  opacity: 0;
+}
+
+/* Fix floating label positioning */
+.form-floating > label {
+  color: var(--text-muted) !important;
+  transition: all 0.3s ease;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.auth-form-label {
+  font-size: 15px;
+  color: var(--text-muted) !important;
+  transition: color 0.3s ease;
+}
+
+.auth-error {
+  color: #dc3545;
+  margin-bottom: 16px;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  transition: all 0.2s ease;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background-color: #0066b3 !important;
+  border-color: #0066b3 !important;
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .auth-form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+[data-theme="dark"] .form-floating > label {
+  color: var(--text-muted) !important;
+}

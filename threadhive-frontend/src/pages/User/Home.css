@@ -1,0 +1,78 @@
+.home-wrapper {
+  display: flex;
+  gap: 28px;
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-start;
+  overflow-x: hidden;
+  padding: 0 12px;
+}
+
+.home-content {
+  padding: 0 !important;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.home-content > .card {
+  border-radius: 16px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Mobile - hide right sidebar, full width content */
+@media (max-width: 991px) {
+  .home-wrapper {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  
+  .home-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px !important;
+  }
+}
+
+/* Desktop - show both sidebars with proper sizing */
+@media (min-width: 992px) {
+  .home-content {
+    flex: 1;
+    min-width: 600px;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-content {
+    flex: 1;
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-content {
+    flex: 1;
+    max-width: 1000px;
+  }
+}
+
+/* Sort button styles */
+.sort-btn {
+  background-color: transparent !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-dark) !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+
+.sort-btn-active {
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}

@@ -1,0 +1,143 @@
+:root {
+  --primary-orange: #FF4500;
+  --primary-blue: #0079D3;
+  --bg-light: #F8F9FA;
+  --bg-white: #FFFFFF;
+  --text-dark: #1A1A1B;
+  --text-muted: #7C7C7C;
+  --border-light: #EDEFF1;
+  --hover-bg: #F6F7F8;
+}
+
+/* Dark mode theme - Decent dark gray, not pitch black */
+[data-theme="dark"] {
+  --primary-orange: #FF6B35;
+  --primary-blue: #4FABFF;
+  --bg-light: #1A1D23;
+  --bg-white: #2C2F36;
+  --text-dark: #E8E9EA;
+  --text-muted: #B0B3B8;
+  --border-light: #3E4147;
+  --hover-bg: #363940;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+  max-width: 100vw;
+  transition: background-color 0.3s ease;
+}
+
+.app-container {
+  flex: 1 0 auto;
+  display: flex;
+  gap: 24px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.main-center-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 24px 0;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .main-center-content {
+    padding: 24px 0;
+    max-width: none;
+    margin: 0;
+    overflow-x: visible;
+  }
+  
+  .app-container {
+    justify-content: center;
+    gap: 24px;
+    padding: 0 24px;
+  }
+}
+
+/* Larger desktop */
+@media (min-width: 1200px) {
+  .main-center-content {
+    padding: 24px 0;
+  }
+  
+  .app-container {
+    gap: 32px;
+    padding: 0 32px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-center-content {
+    padding: 20px 0;
+  }
+  
+  .app-container {
+    gap: 16px;
+    padding: 0 16px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .main-center-content {
+    padding: 16px 0;
+  }
+  
+  .app-container {
+    gap: 0;
+    padding: 0;
+    max-width: 100vw;
+    width: 100%;
+  }
+  
+  .app-layout {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Fix Bootstrap containers on mobile */
+  .container,
+  .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure cards don't overflow */
+  .card {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Fix any row overflow */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .col, [class*="col-"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
